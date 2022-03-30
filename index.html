@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+
+    </head>
+    <body>
+        <h1>Welcome to Library UI</h1>
+        <p>Add or delete books from your library and mark them as read</p>
+        <form>
+            <label for="title">Title:</label>
+            <input type="text" name="title" required>
+            <label for="author">Author:</label>
+            <input type="text" name="author" required>
+            <label for="pages">Pages:</label>
+            <input type="text" name="pages" required>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <button type="submit">Add</button>
+            
+        </form>
+        <div class="Library">
+            <button>Add book</button>
+            <div class="Bookshelf">
+                <div class="Book"></div>
+            </div>
+        </div>
+    </body>
+</html>
