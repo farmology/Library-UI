@@ -1,3 +1,31 @@
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+
+}
+
+.formcontainer{
+  background-color: navy;
+  margin: 25% auto;
+  padding: 3%;
+  width: 50%;
+  
+}
+
+.popupform {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
 .switch {
     position: relative;
     display: inline-block;

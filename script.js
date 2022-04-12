@@ -20,13 +20,30 @@ let Library = [
 ];
 const bookshelf = document.querySelector(".bookshelf");
 const book = document.createElement("li");
+const openFormBtn = document.getElementById('openForm');
+const modal = document.getElementById('simpleModal');
+
+function openModal(){
+    modal.style.display = 'block';
+}
+
+function closeModal(e){
+    if(e.target == modal){
+        modal.style.display = 'none';
+    }
+}
+
+openFormBtn.addEventListener('click', openModal);
+window.addEventListener('click', closeModal);
+
+
+
 
 book.classList.add('book');
 
 Library.map(object => {
     book.innerHTML = 
-        `
-        <ul>
+        `<ul>
             <li>
             Title: ${object.title}
             </li>
@@ -39,9 +56,8 @@ Library.map(object => {
             <li>
             Read: ${object.read}
             </li>
-         </ul>
-         `;
-         bookshelf.appendChild(book.cloneNode(true));
+         </ul>`;
+    bookshelf.appendChild(book.cloneNode(true));
         }
     
     )
